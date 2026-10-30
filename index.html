@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veeraneni Sai Gokul | AI/ML Engineer</title>
+  <meta name="description" content="AI/ML undergraduate at SRM IST, Tiruchirappalli, building computer vision systems, voice AI receptionists and smart automation. See projects and say hello.">
+  <meta name="author" content="Veeraneni Sai Gokul">
+  <meta name="theme-color" content="#09090b">
+  <!-- If your site lives at a different address, replace every https://gocool9748-sg.github.io in this file, robots.txt and sitemap.xml. -->
+  <link rel="canonical" href="https://gocool9748-sg.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gocool9748-sg.github.io/">
+  <meta property="og:site_name" content="Veeraneni Sai Gokul">
+  <meta property="og:title" content="Veeraneni Sai Gokul | AI/ML Engineer">
+  <meta property="og:description" content="AI/ML undergraduate at SRM IST, Tiruchirappalli, building computer vision systems, voice AI receptionists and smart automation. See projects and say hello.">
+  <meta property="og:image" content="https://gocool9748-sg.github.io/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Veeraneni Sai Gokul — AI/ML Engineer. Building intelligent systems, creating real-world impact.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Veeraneni Sai Gokul | AI/ML Engineer">
+  <meta name="twitter:description" content="AI/ML undergraduate building computer vision systems, voice AI receptionists and smart automation. See projects and say hello.">
+  <meta name="twitter:image" content="https://gocool9748-sg.github.io/assets/img/og.png">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Veeraneni Sai Gokul","jobTitle":"AI/ML Engineer","url":"https://gocool9748-sg.github.io/","alumniOf":"SRM Institute of Science and Technology","address":{"@type":"PostalAddress","addressRegion":"Tamil Nadu","addressCountry":"IN"},"sameAs":["https://github.com/gocool9748-sg"]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Before paint: saved theme + JS flag (prevents flashes) */
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        var t = localStorage.getItem("sg-theme");
+        if (t === "light" || t === "dark") d.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-mark" id="brand-mark">SG</span>
+        <span class="brand-name roll-host" id="brand-name"></span>
+      </a>
+      <nav class="nav-links" id="nav-links" aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#projects">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#achievements">Activities</a>
+        <a href="#github">GitHub</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="nav-status" id="nav-status"></span>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top"></section>
+    <div class="marquee" id="marquee" aria-hidden="true"></div>
+    <section class="section" id="about"></section>
+    <section class="section" id="projects"></section>
+    <section class="section" id="skills"></section>
+    <section class="section" id="education"></section>
+    <section class="section" id="achievements"></section>
+    <section class="section" id="github"></section>
+    <section class="section section-contact" id="contact"></section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <article class="modal-panel" id="modal-panel" tabindex="-1"></article>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">This portfolio needs JavaScript enabled to display its content.</div>
+  </noscript>
+
+  <script src="content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

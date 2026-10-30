@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /editor.html
+
+Sitemap: https://gocool9748-sg.github.io/sitemap.xml

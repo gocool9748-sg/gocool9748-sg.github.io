@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Portfolio Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/editor.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">SG</span><div><strong>Portfolio Editor</strong><small>Edit your content — no code needed</small></div></div>
+    <div class="actions">
+      <label class="btn" title="Open a content.js file">
+        <input type="file" id="import-file" accept=".js,.json,text/javascript,application/json" hidden>
+        Open file
+      </label>
+      <button class="btn" id="btn-reset" type="button" title="Throw away changes and start from the published content.js">Reset</button>
+      <button class="btn" id="btn-preview" type="button" aria-pressed="true">Preview</button>
+      <button class="btn" id="btn-copy" type="button">Copy code</button>
+      <button class="btn btn-primary" id="btn-download" type="button">Download content.js</button>
+    </div>
+  </header>
+
+  <div class="banner" id="draft-banner" hidden>
+    <span>You have unsaved changes from last time.</span>
+    <button class="btn btn-sm btn-primary" id="btn-restore" type="button">Restore them</button>
+    <button class="btn btn-sm" id="btn-discard" type="button">Discard</button>
+  </div>
+
+  <div class="layout" id="layout">
+    <nav class="sidebar" id="sidebar" aria-label="Sections"></nav>
+    <main class="form-pane">
+      <div class="help" id="help">
+        <strong>How it works:</strong> change anything below — the preview updates instantly. When you're happy, click
+        <b>Download content.js</b> and replace the <code>content.js</code> file in your website folder (or upload it to your GitHub repo).
+        Your changes are also kept as a draft in this browser.
+      </div>
+      <div id="form"></div>
+    </main>
+    <aside class="preview-pane" id="preview-pane">
+      <div class="preview-bar"><span>Live preview</span>
+        <div class="seg" role="group" aria-label="Preview size">
+          <button type="button" data-size="desktop" aria-pressed="true">Desktop</button>
+          <button type="button" data-size="mobile" aria-pressed="false">Mobile</button>
+        </div>
+      </div>
+      <div class="preview-stage"><iframe id="preview" src="index.html" title="Live preview of your portfolio"></iframe></div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="dialog" id="code-dialog" hidden>
+    <div class="dialog-panel">
+      <div class="dialog-head"><strong>Your content.js</strong><button class="btn btn-sm" type="button" id="close-code">Close</button></div>
+      <p class="muted">Select all of this text and paste it into <code>content.js</code>, replacing everything in that file.</p>
+      <textarea id="code-out" readonly spellcheck="false"></textarea>
+    </div>
+  </div>
+
+  <script src="content.js"></script>
+  <script src="assets/js/editor.js"></script>
+</body>
+</html>
